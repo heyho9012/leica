@@ -7,6 +7,7 @@ productBtn=productBox.find('.button_area').find('button');
 
 let c=0;
 let productListH=productWrap.find('li').outerHeight(true);
+productWrap.css({marginTop:-productListH});
 
 const productSlide = function(){
 
