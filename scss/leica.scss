@@ -1,0 +1,152 @@
+// leica.scss
+/* leica.css */
+@import "_basic/_mixin";
+// mixin -------------------------------
+@import "_temp/_mobile";
+@import "_temp/_tablet";
+@import "_temp/_pc_default";
+@import "_temp/_pc_1920";
+// -------------------------------------------------------------
+@import "_temp/_header";
+@import "_temp/_footer";
+// -------------------------------------------------------------
+header,footer{min-width:23.75rem;}
+#wrap{width:100%;height:auto;margin:auto;}
+section{width:100%;height:auto;min-width:23.75rem;}
+article,aside{width:100%;margin:auto;min-width:23.75rem;}
+#eventBox{background-color:#f6ebe8;}
+// -------------------------------------------------------------
+#viewBox{position:relative;
+    @include indicator;
+    >ul{position:relative;width:100%;height:100%;
+        >li{position:absolute;left:0;top:0;width:100%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:70% 0;box-sizing:border-box; 
+            &:last-child{p{color:#060606;}}
+            &:not(:first-child){display:none;}
+            @for $i from 1 to 6 {&:nth-child(#{$i}){background-image:url("../img/view/view_0"+$i+".jpg");}}
+            div{position:absolute;top:50%;transform:translateY(-50%);width:auto;height:auto;
+                p{margin-bottom:1.25rem;font-weight:bold;color:#fff;}
+                a{background-color:#e20613;color:#fff;text-align:center;font-weight:600;padding:0;transition:all .3s ease;
+                    &:hover{background-color:#060606;color:#e20613;font-weight:600;}
+                }
+}}}}
+// -------------------------------------------------------------
+#eventBox{
+    >ul{>li{@for $i from 1 to 4{&:nth-child(#{$i})>ul>li:first-child div{background-image:url("../img/event_01/event_0"+$i+".png");}}
+            &:first-child>ul>li:first-child div{background-size:cover;background-position:60% 50%;}
+            &:nth-child(3){>ul>li:first-child div{background-size:contain;}background-color:#fff;}
+            >ul{
+                >li{overflow:hidden;
+                    &:hover div{transform:scale(1.1);}
+                    div{position:relative;width:100%;height:100%;position:relative;background-repeat:no-repeat;background-size:cover;background-position:50% 50%;transition:all .7s ease;}
+                    &:last-child{background-color:#060606;color:#fff;
+                    p{float:left; strong{font-weight:600;transition:all .7s ease;}}
+                    @include round_button;  
+                   
+            }}}
+}}}
+// -------------------------------------------------------------
+#productBox{position:relative;overflow:hidden;
+    h2{text-transform:uppercase;}
+    .slide_wrap{@include center;overflow:hidden;}
+    ul{position:relative;}
+    ul>li{
+        @for $i from 1 to 8{&.p_slide_0#{$i} a{background-image:url("../img/product/product_0"+$i+".png");}}
+        a{@include link;background-repeat:no-repeat;background-position:50% 50%;background-size:cover;transition:all .5s ease;
+            &:hover,&:focus{transform:scale(1.06);}
+        }
+        p{font-weight:600;span{display:block;color:#e20613;font-weight:bold;}}
+    }
+    .button_area{
+        button{position:relative;background-color:transparent;transition:all .5s ease;
+            &:hover{ span{color:#e20613;}}
+            span{position:absolute;top:0;left:0;display:block;width:100%;height:100%;color:#060606;font-size:1.25rem;font-weight:bold;transition:all .5s ease;}
+
+    }}
+}
+// -------------------------------------------------------------
+#storyBox{position:relative;overflow:hidden;
+    h2{@include center;z-index:100;color:#e0e0e0;font-weight:bold;text-transform:uppercase;}
+    >ul{position:relative;width:100%;height:100%;
+        >li{position:absolute;left:0;top:0;width:100%;height:100%;background-position:38% 50%;background-repeat:no-repeat;background-size:cover;
+            &:not(:first-child){display:none;}
+            @for $i from 1 to 7{&:nth-child(#{$i}){background-image:url("../img/story/story_0"+$i+".jpg");}}
+            div{@include img_center;
+            &:before{content:"";position:absolute;display:block;width:18px;height:18px;box-sizing:border-box;border-top:2px solid #fff;border-right:2px solid #fff;transition:all .5s ease;}
+            &:after{content:"";position:absolute;display:block;width:18px;height:18px;box-sizing:border-box;border-bottom:2px solid #fff;border-left:2px solid #fff;transition:all .5s ease;}
+            &:hover:before,&:hover:after{width:60px;height:40px;}
+            &:hover a{background-color:#060606;}
+                a{@include link;background-color:rgba(6, 6, 6,0.5);color:#fff;font-weight:bold;text-align:left;transition:all 1s ease; em{font-style:normal;font-weight:normal;}}}
+        }
+    }
+    @include indicator(#fff,366px,300px);
+    .indicator{left:50%;transform:translateX(-50%);bottom:2.75rem;}
+}
+// -------------------------------------------------------------
+#blogBox{width:100%;}
+    .blog_01{margin:auto;overflow:hidden;
+        >ul:first-of-type{width:100%;
+            >li{width:100%;height:100%;text-align:left;
+                &.blog_act a{color:#e20613;border-left:4px solid #e20613;}
+                a{font-weight:bold;margin:auto;color:#e0e0e0;border-left:4px solid #e0e0e0;box-sizing:border-box;transition:all .5s ease;}
+            }
+        }
+        >ul:last-of-type{position:relative;width:100%;
+            >li{position:absolute;left:0;top:0;width:100%;
+                &:not(:nth-of-type(2)){display:none;}
+                >ul{width:100%;height:100%;
+                    >li{width:100%;
+                        a{overflow:hidden;
+                            div{width:100%;height:100%;background-repeat:no-repeat;background-position:50% 50%;background-size:cover;transition:all .7s ease;}
+                            &:focus div,&:hover div{transform:scale(1.1);}
+                        }
+                        p{box-sizing:border-box;font-weight:bold;transition:all .7s ease; span{font-weight:normal;}}
+        }}}}
+    }
+    .list_01{@for $i from 1 to 4{& li:nth-of-type(#{$i}) a div{background-image:url("../img/blog/blog_01_0"+$i+".jpg");}}}
+    .list_02{@for $i from 1 to 4{& li:nth-of-type(#{$i}) a div{background-image:url("../img/blog/blog_02_0"+$i+".jpg");}}}
+    .list_03{@for $i from 1 to 4{& li:nth-of-type(#{$i}) a div{background-image:url("../img/blog/blog_03_0"+$i+".jpg");}}}
+
+    .blog_02{width:100%;
+        >ul{height:100%; 
+            >li{width:100%;border:2px solid #e0e0e0;transition:all .6s ease;
+                &.blog_02_act{border:2px solid #e20613;}
+                @for $i from 1 to 4{&:nth-of-type(#{$i})>ul>li:nth-of-type(1){background-image:url("../img/event_02/event_0"+$i+".png");}}
+                >ul{position:relative;width:100%;height:100%;transition:all .6s ease;
+                    >li{word-break:keep-all;
+                        &:first-of-type{a{@include link;}}
+                        &:last-of-type{
+                            width:100%;position:absolute;bottom:0.75rem;
+                            @include round_button(24px,12px,2px);
+                            a{margin-right:0.75rem;}
+                        }
+                        p{font-weight:600;box-sizing:border-box;}
+
+        }}}}
+    }
+// -------------------------------------------------------------
+#storeBox{background-color:#060606;box-sizing:border-box;
+    h2{text-align:center;color:#e20613;}
+    ul{margin:auto;
+        li{a{@include link;color:#a0a0a0;text-align:center;transition:all .8s ease;
+            &:hover,&:focus{color:#fff;}
+    }}}
+    dl{margin:auto;
+        dt{
+        label{width:100%;height:100%;
+            p{width:100%;height:100%;}
+        }}
+        dd{position:relative;
+            input{float:left;padding:0;box-sizing:border-box;}
+            input::placeholder{color:#9b9998;}
+            input:first-of-type{height:100%;border:1px solid #fff;background-color:rgba(255, 255, 255,0.1);}
+            input[type="submit"]{font-family:'icomoon';height:100%;border:0;background-color:#fff;font-weight:bold;color:#e20613;font-size:1.5rem;text-indent:0.25rem;}
+        }
+    }
+    p{color:#fff;font-weight:bold;}
+}
+// -------------------------------------------------------------
+@include pc_full;
+@include pc_default;
+@include tablet;
+@include mobile;
+

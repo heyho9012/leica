@@ -1,0 +1,39 @@
+header{transition:all .5s ease;
+    position:fixed;top:0;left:0;z-index:2000;width:100%;background-color:#060606;box-sizing:border-box;
+    h1{@include bg("../img/logo/logo.svg",50%,50%);float:left;width:48px;height:48px; a{@include link;}}
+}
+    #gnb{@include center;
+        >ul{width:100%;height:100%;
+            >li{float:left;height:100%;
+                >ul{display:none;width:260px;height:auto;background-color:#060606;box-sizing:border-box;
+                    >li{position:relative;width:100%;height:60px;
+                        a{@include link;line-height:3.75rem;text-align:left;text-indent:1rem;font-size:0.875rem;color:#fff;
+                            &:hover,&:focus{background-color:#e20613;color:#060606;font-weight:bold;}
+                            
+                        }
+                }}
+            &:last-child{margin-right:0;}
+                >a{@include link;position:relative;color:#fff;font-weight:600;text-align:center;transition:all .5s ease;overflow:hidden;
+                    &.gnb_action{color:#e20613;font-weight:bold;}
+                }
+        }}
+    }
+    #unb{float:right;
+        ul{width:100%;height:100%;
+            li{float:left;width:auto;height:100%;
+            &:first-child{height:100%; span{display:block;height:100%;color:#fff;}}
+            &:last-child{width:20px;height:48px;margin-right:0;}
+                a{@include link;color:#fff;font-weight:600;}
+
+                button{position:absolute;top:50%;transform:translateY(-50%);width:20px;height:16px;
+                    span{display:block;position:absolute;width:100%;height:2px;border-radius:0.0625rem;background-color:#fff;transition:all .7s ease;}
+                    span:nth-child(1){top:0;}
+                    span:nth-child(2){top:50%;transform:translateY(-50%);}
+                    span:nth-child(3){bottom:0;}
+                    // -------------------------------------------------------------
+                    &.menu_act span:nth-child(1){top:50%;transform:translateY(-50%)rotate(45deg);}
+                    &.menu_act span:nth-child(2){opacity:0;}
+                    &.menu_act span:nth-child(3){bottom:50%;transform:translateY(50%)rotate(-45deg);}
+                }}}}
+// -------------------------------------------------------------
+#headBox.action{background-color:rgba(6,6,6,0.7); nav>ul>li>ul{background-color:rgba(6,6,6,0.7);}}

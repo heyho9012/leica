@@ -1,0 +1,129 @@
+@mixin pc_full {
+@media screen and (min-width:1920px) {
+    @content;
+// -------------------------------------------------------------
+    header{height:80px;padding:0 10.625rem;
+        h1{margin-top:1rem;}
+    }
+    #gnb{width:1016px;height:80px;
+        >ul>li{margin-right:0.25rem;width:166px;
+            >a{line-height:5rem;font-size:1rem;}
+        }
+    }
+    #unb{width:186px;height:100%;
+        li{margin-right:3rem;
+            &:first-child{width:24px; span{width:24px;font-size:1.375rem;line-height:5rem;}}
+            a{line-height:5rem;font-size:1rem; span{line-height:5rem;}}}}
+// -------------------------------------------------------------
+    #viewBox{height:840px;margin-top:5rem;
+        >ul{>li{padding:0 10.625rem; p{font-size:3.5rem;} a{@include link(240px,62px);font-size:1.25rem;line-height:3.875rem;}}}
+        .indicator{right:10%;bottom:3rem;}
+    }
+// -------------------------------------------------------------
+    #eventBox{height:1160px;padding:11.625rem 0;box-sizing:border-box;
+        >ul{width:1258px;height:790px;margin:auto;
+            >li{float:left; margin-bottom:2.125rem;
+                &:first-child{width:744px;height:100%;margin-right:2.125rem; >ul>li:first-child{height:690px;}}
+                &:not(:first-child){width:480px;height:378px; >ul>li:first-child{height:278px;}}
+                &:last-child{margin-bottom:0;}
+                >ul{width:100%;height:100%;
+                    >li:first-child{width:100%;}
+                    >li:last-child{width:100%;height:100px;padding:1.25rem;box-sizing:border-box; 
+                        P{float:left;width:360px;height:100%;font-size:1.25rem; strong{font-size:1.5rem;}} a{margin-top:0.625rem;}}
+    }}}}
+// -------------------------------------------------------------
+    #productBox{height:1200px;
+        h2{position:absolute;top:50%;left:17.29%;transform:translateY(-50%);font-size:2rem;}
+        .button_area{@include img_center;left:55.4%;width:0;height:1048px;
+            button{position:absolute;width:44px;height:22px;
+                &.prev{top:0;} &.next{bottom:0;}
+                & .icon-right-arrow,& .icon-left-arrow{display:none;}
+            }
+        }
+        .slide_wrap{top:50%;left:45.834%;transform:translateY(-50%);width:680px;height:924px;}
+        ul{width:100%;height:300%;
+            li{position:relative;width:100%;height:268px;margin-bottom:3.75rem;
+                // &:nth-child(3n){margin-bottom:0;}
+                div{float:left;width:400px;height:268px;}
+                p{position:absolute;top:50%;left:440px;transform:translateY(-50%);width:288px;height:auto;text-align:left;font-size:1.25rem;span{margin-bottom:0.5rem;font-size:1.5rem;}}
+            }}
+    }
+// -------------------------------------------------------------
+    #storyBox{height:900px;overflow:hidden;
+        h2{top:19rem;width:268px;height:56px;font-size:2rem;line-height:3.5rem;}
+        >ul{>li{
+            &:nth-child(5){div{a{padding-left:4.75rem;}}}
+            div{width:580px;height:358px;
+                &:before{top:7rem;right:1.5rem;}
+                &:after{bottom:1.5rem;left:1.5rem;}
+                a{padding:9rem 0 0 7rem;box-sizing:border-box;font-size:2rem;line-height:2.5rem; em{font-size:1.5rem;}}}}
+        }
+    }
+// -------------------------------------------------------------
+    #blogBox{position:relative;height:1848px;padding-top:10.75rem;box-sizing:border-box;}
+    .blog_01{margin-left:45.5rem;width:860px;height:860px;margin-bottom:11.6875rem;
+        ul:first-of-type{position:absolute;left:17%;top:34.125rem;width:420px;height:120px;
+         li{height:40px; a{@include link;font-size:1.5rem;text-indent:1.5rem;line-height:2.5rem;}}
+        }
+        ul:last-of-type{top:0;left:0;width:100%;height:100%;
+            >li{height:100%;
+                >ul{
+                    >li{position:relative;width:430px;height:286px;
+                        &:first-of-type{ p{width:400px;}}
+                        &:nth-of-type(2){left:50%; p{left:-478px;text-align:right;}}
+                        p{position:absolute;top:50%;transform:translateY(-50%);width:100%;left:478px;font-size:1.75rem;word-break:keep-all;
+                            span{font-size:20px;}
+                        }
+                    }
+    }}}}
+            
+    .blog_02{width:990px;height:434px;margin:auto;
+        >ul{width:100%;height:100%;
+            >li{float:left;width:307px;height:100%;margin-right:2.125rem;box-sizing:border-box;
+                &:last-of-type{margin-right:0;}
+                >ul{
+                    >li{float:left;width:100%;
+                    &:first-of-type{height:205px;}
+                        p{float:left;width:96%;font-size:0.75rem;margin-top:0.5rem;padding-left:0.75rem;strong{font-size:1rem;line-height:3rem;}
+                        
+    }}}}}}
+// -------------------------------------------------------------
+#storeBox{height:300px;padding-top:3.75rem;
+    h2{margin-bottom:1rem;font-size:1.5rem;}
+    ul{width:576px;height:22px;margin-bottom:4.5rem;
+        li{float:left;width:auto;height:auto;margin:auto;margin-right:1.25rem;
+            &:last-child{margin-right:0;}
+            a{font-size:1.125rem;}
+        }
+    }
+    dl{width:600px;height:40px;
+        dt{float:left;width:248px;height:100%;
+            p{font-size:1.25rem;line-height:2.25rem;}
+        }
+        dd{float:right;width:324px;height:100%;
+            input::placeholder{font-size:1rem;}
+            input:first-of-type{width:284px;text-indent:1rem;}
+            input:last-of-type{width:40px;}
+        }
+    }
+}
+// -------------------------------------------------------------
+#footBox{height:535px;padding-top:4.875rem;}
+.foot_list_01{margin:auto;margin-bottom:2rem;width:940px;height:300px;
+        li{float:left;width:auto;height:120px;margin-right:5rem;
+            dl{width:auto;height:100%;
+                dt{width:100%;height:18px;margin-bottom:1.25rem;
+                    a{@include link;font-size:0.75rem;margin-bottom:1.375rem;}
+                }
+                dd{a{@include link;font-size:0.75rem;margin-bottom:0.5rem; &:last-child{margin-bottom:0;}}}
+            }
+            &:nth-child(5){margin-right:0;}
+            &:last-child{margin-top:5.5rem;margin-right:0;}
+}}
+.foot_list_02{position:relative;width:814.8px;height:48px;
+    li{margin-right:3.75rem;margin-top:1rem;
+        &:last-child{margin-right:0;margin:0;}
+    }
+}
+// -------------------------------------------------------------
+}}
