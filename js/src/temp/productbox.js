@@ -15,12 +15,12 @@ productBtn.off().on('click',function(e){
   e.preventDefault();
   e.stopPropagation();
 
-  let $has=$(this).hasClass('next');  
+  let $hasNext=$(this).hasClass('next');  
 
   productBtn.attr("disabled",true);
   setTimeout(function(){productBtn.removeAttr("disabled");},500);
 
-  if($has){
+  if($hasNext){
       c++;
       productWrap.stop().animate({top:-productListH},function(){
           productWrap.children('li').eq(0).appendTo(productWrap);
