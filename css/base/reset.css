@@ -21,10 +21,10 @@ main, header, footer, aside, nav, article, section, figure, figcaption{display:b
 form, fieldset, legend{margin:0;padding:0;border:0;}
 legend{width:0;height:0;overflow:hidden;position:absolute;}
 
-button{border:0;background-color:transparent;color:#fff;cursor:pointer;padding:0;outline:0;}
+button{border:0;background-color:transparent;color:#fff;cursor:pointer;padding:0;}
 select, text-area{box-sizing:border-box;}
 
-input,button {border-radius:0;-webkit-appearance:none;}
+input,button {border-radius:0;-webkit-appearance:none;padding:0;}
 input[type="submit"]{cursor: pointer;}
 [type="text"]:hover,
 [type="password"]:hover,
