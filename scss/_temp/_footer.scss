@@ -24,6 +24,6 @@ footer{width:100%;background-color:#f6ebe8;box-sizing:border-box;
     li{float:left;margin-right:1.5rem;font-size:0.75rem;font-weight:600;
         a{font-size:0.75rem;font-weight:600;}
         a:hover,a:focus{color:#e20613;font-weight:600;}
-        &:last-child{width:48px;height:48px;a{@include link;background-image:url("../../img/logo/logo.svg");background-repeat:no-repeat;}}
+        &:last-child{width:48px;height:48px;a{@include link;background-image:url("../img/logo/logo.svg");background-repeat:no-repeat;}}
     }
 }

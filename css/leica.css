@@ -115,7 +115,7 @@ footer a:hover, footer a:focus { color: #e20613; }
 
 .foot_list_02 li:last-child { width: 48px; height: 48px; }
 
-.foot_list_02 li:last-child a { display: block; width: 100%; height: 100%; background-image: url("../../img/logo/logo.svg"); background-repeat: no-repeat; }
+.foot_list_02 li:last-child a { display: block; width: 100%; height: 100%; background-image: url("../img/logo/logo.svg"); background-repeat: no-repeat; }
 
 .foot_list_02 li:last-child a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
 
