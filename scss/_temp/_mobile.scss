@@ -10,7 +10,7 @@
             &:first-child{width:24px; span{width:24px;height:48px;text-indent:0.125rem;font-size:1.25rem;line-height:3.125rem;}} 
             a{line-height:3rem;font-size:0.75rem;}}}
 // -------------------------------------------------------------
-    #viewBox{height:580px;margin-top:3.75rem;
+    #viewBox{
         >ul{>li{padding:0 0.625rem; p{font-size:1.5rem;word-break:keep-all;width:370px;} a{@include link(180px,42px);line-height:2.625rem;}}}
         .indicator{left:50%;transform:translateX(-50%);bottom:2rem;}
     }

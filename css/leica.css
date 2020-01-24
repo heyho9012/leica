@@ -119,9 +119,9 @@ footer a:hover, footer a:focus { color: #e20613; }
 
 .foot_list_02 li:last-child a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
 
-header, footer { min-width: 23.75rem; }
+#wrap { position: relative; width: 100%; min-height: 100%; margin: auto; }
 
-#wrap { width: 100%; height: auto; margin: auto; }
+header, footer { min-width: 23.75rem; }
 
 section { width: 100%; height: auto; min-width: 23.75rem; }
 
@@ -129,7 +129,7 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
 
 #eventBox { background-color: #f6ebe8; }
 
-#viewBox { position: relative; }
+#viewBox { position: relative; height: 100%; }
 
 #viewBox .indicator { position: absolute; z-index: 1000; width: 316px; height: 20px; }
 
@@ -426,7 +426,6 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb li:first-child span { width: 24px; font-size: 1.375rem; line-height: 5rem; }
   #unb li a { line-height: 5rem; font-size: 1rem; }
   #unb li a span { line-height: 5rem; }
-  #viewBox { height: 840px; margin-top: 5rem; }
   #viewBox > ul > li { padding: 0 10.625rem; }
   #viewBox > ul > li p { font-size: 3.5rem; }
   #viewBox > ul > li a { display: block; width: 240px; height: 62px; font-size: 1.25rem; line-height: 3.875rem; }
@@ -528,7 +527,6 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb li:first-child { width: 24px; }
   #unb li:first-child span { width: 24px; height: 100%; text-indent: 0.125rem; font-size: 1.25rem; line-height: 5rem; }
   #unb li a { line-height: 5rem; font-size: 0.75rem; }
-  #viewBox { height: 720px; margin-top: 5rem; }
   #viewBox > ul > li { padding: 0 7.05%; }
   #viewBox > ul > li p { font-size: 3rem; }
   #viewBox > ul > li a { display: block; width: 240px; height: 62px; font-size: 1.25rem; line-height: 3.875rem; }
@@ -625,7 +623,6 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb li:first-child { width: 24px; }
   #unb li:first-child span { width: 24px; height: 48px; text-indent: 0.125rem; font-size: 1.25rem; line-height: 3.125rem; }
   #unb li a { line-height: 3rem; font-size: 0.75rem; }
-  #viewBox { height: 964px; margin-top: 3.75rem; }
   #viewBox > ul > li { padding: 0 2.125rem; }
   #viewBox > ul > li p { font-size: 2.5rem; }
   #viewBox > ul > li a { display: block; width: 180px; height: 42px; line-height: 2.625rem; }
@@ -712,7 +709,6 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb li:first-child { width: 24px; }
   #unb li:first-child span { width: 24px; height: 48px; text-indent: 0.125rem; font-size: 1.25rem; line-height: 3.125rem; }
   #unb li a { line-height: 3rem; font-size: 0.75rem; }
-  #viewBox { height: 580px; margin-top: 3.75rem; }
   #viewBox > ul > li { padding: 0 0.625rem; }
   #viewBox > ul > li p { font-size: 1.5rem; word-break: keep-all; width: 370px; }
   #viewBox > ul > li a { display: block; width: 180px; height: 42px; line-height: 2.625rem; }

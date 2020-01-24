@@ -10,13 +10,13 @@
 @import "_temp/_header";
 @import "_temp/_footer";
 // -------------------------------------------------------------
+#wrap{position:relative;width:100%;min-height:100%;margin:auto;}
 header,footer{min-width:23.75rem;}
-#wrap{width:100%;height:auto;margin:auto;}
 section{width:100%;height:auto;min-width:23.75rem;}
 article,aside{width:100%;margin:auto;min-width:23.75rem;}
 #eventBox{background-color:#f6ebe8;}
 // -------------------------------------------------------------
-#viewBox{position:relative;
+#viewBox{position:relative;height:100%;
     @include indicator;
     >ul{position:relative;width:100%;height:100%;
         >li{position:absolute;left:0;top:0;width:100%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:70% 0;box-sizing:border-box; 
