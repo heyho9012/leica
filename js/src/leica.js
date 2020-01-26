@@ -49,7 +49,7 @@
     for(let i=0;i<5;i++){indiLi.eq(i).css({left:50*i+'px'});}
     for(let i=0;i<6;i++){indiLi02.eq(i).css({left:50*i+'px'});}
     // ----------------------------------------------------------
-    let go,i=0,j=0,timed=3000;
+    let go,i=0,j=0,timed=2000;
 
     indiLi.eq(0).find('span').animate({left:'50px'},timed*1.5);
     indiLi02.eq(0).find('span').animate({left:'50px'},timed*1.5);
@@ -58,11 +58,12 @@
         indicator.find('a').on('click',function(e){
 
             e.preventDefault();
-            
+            e.stopPropagation();
+
             let indiIndex=$(this).parent().index();
             
-            li.eq(indiIndex).fadeIn(timed/1.5);
-            li.eq(indiIndex).siblings().fadeOut(timed/1.5);
+            li.eq(indiIndex).fadeIn(timed);
+            li.eq(indiIndex).siblings().fadeOut(timed);
             
             i=li.eq(indiIndex).index()-1;
             j=li.eq(indiIndex).index()-1;
@@ -74,21 +75,22 @@
         indiFn(indiLi,viewLi);
         indiFn(indiLi02,storyLi);
 
-        setInterval(function(){
-
+        go=setInterval(function(){
             indiLi.eq(i).siblings().find('span').css({left:'-50px'});
             indiLi02.eq(j).siblings().find('span').css({left:'-50px'});
 
             i++; if(i==5){i=0;}
             j++; if(j==6){j=0;}
 
-            viewLi.eq(i).fadeIn(timed/1.5).siblings().fadeOut(timed/1.5);
-            storyLi.eq(j).fadeIn(timed/1.5).siblings().fadeOut(timed/1.5);
+            viewLi.eq(i).fadeIn(timed/1.5);
+            viewLi.eq(i).siblings().fadeOut(timed);
+            storyLi.eq(j).fadeIn(timed);
+            storyLi.eq(i).siblings().fadeOut(timed);
 
-            indiLi.eq(i).find('span').stop().animate({left:'50px'},timed*1.5);
-            indiLi02.eq(j).find('span').stop().animate({left:'50px'},timed*1.5);
+            indiLi.eq(i).find('span').stop().animate({left:'50px'},timed*2);
+            indiLi02.eq(j).find('span').stop().animate({left:'50px'},timed*2);
 
-        },timed*1.5);
+        },timed*2);
 
     }; slideGo(); // viewBox, storyBox SETINTERVAL fadeIn&Out && indicatorBar
 
