@@ -47,7 +47,7 @@ header h1 a > span { position: absolute; z-index: -1; display: block; width: 0; 
 
 #unb ul li a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
 
-#unb ul li a:hover, #unb ul li a:focus { color: #e20613; font-weight: bold; }
+#unb ul li a:hover, #unb ul li a:focus { color: #e20613; font-weight: 600; }
 
 #unb ul li a:hover span, #unb ul li a:focus span { color: #e20613; font-weight: bold; }
 
@@ -169,25 +169,31 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
 
 #viewBox > ul > li div a { background-color: #e20613; color: #fff; text-align: center; font-weight: 600; padding: 0; transition: all .3s ease; }
 
-#viewBox > ul > li div a:hover { background-color: #060606; color: #e20613; font-weight: 600; }
+#viewBox > ul > li div a:hover, #viewBox > ul > li div a:focus { background-color: #060606; color: #e20613; font-weight: 600; }
 
-#eventBox > ul > li:nth-child(1) > ul > li:first-child div { background-image: url("../img/event_01/event_01.png"); }
+.indicator a { display: block; width: 100%; height: 100%; }
 
-#eventBox > ul > li:nth-child(2) > ul > li:first-child div { background-image: url("../img/event_01/event_02.png"); }
+.indicator a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
 
-#eventBox > ul > li:nth-child(3) > ul > li:first-child div { background-image: url("../img/event_01/event_03.png"); }
+#eventBox > ul > li:nth-child(1) > ul > li:first-child div a { background-image: url("../img/event_01/event_01.png"); }
 
-#eventBox > ul > li:first-child > ul > li:first-child div { background-size: cover; background-position: 60% 50%; }
+#eventBox > ul > li:nth-child(2) > ul > li:first-child div a { background-image: url("../img/event_01/event_02.png"); }
+
+#eventBox > ul > li:nth-child(3) > ul > li:first-child div a { background-image: url("../img/event_01/event_03.png"); }
+
+#eventBox > ul > li:first-child > ul > li:first-child div a { background-size: cover; background-position: 60% 50%; }
 
 #eventBox > ul > li:nth-child(3) { background-color: #fff; }
 
-#eventBox > ul > li:nth-child(3) > ul > li:first-child div { background-size: contain; }
+#eventBox > ul > li:nth-child(3) > ul > li:first-child div a { background-size: contain; }
 
-#eventBox > ul > li > ul > li { overflow: hidden; }
+#eventBox > ul > li > ul > li div { position: relative; width: 100%; height: 100%; overflow: hidden; }
 
-#eventBox > ul > li > ul > li:hover div { transform: scale(1.1); }
+#eventBox > ul > li > ul > li div a { display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; transition: all .7s ease; }
 
-#eventBox > ul > li > ul > li div { position: relative; width: 100%; height: 100%; position: relative; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; transition: all .7s ease; }
+#eventBox > ul > li > ul > li div a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+
+#eventBox > ul > li > ul > li div a:hover, #eventBox > ul > li > ul > li div a:focus { transform: scale(1.1); }
 
 #eventBox > ul > li > ul > li:last-child { background-color: #060606; color: #fff; }
 
@@ -296,6 +302,10 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
 #storyBox .indicator > ul > li span { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 100%; background-color: #e20613; }
 
 #storyBox .indicator { left: 50%; transform: translateX(-50%); bottom: 2.75rem; }
+
+#storyBox .indicator a { display: block; width: 100%; height: 100%; }
+
+#storyBox .indicator a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
 
 #blogBox { width: 100%; }
 
@@ -413,6 +423,8 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
 
 #storeBox dl dd input[type="submit"] { font-family: 'icomoon'; height: 100%; border: 0; background-color: #fff; font-weight: bold; color: #e20613; font-size: 1.5rem; text-indent: 0.25rem; }
 
+#storeBox dl dd input[type="submit"]:hover, #storeBox dl dd input[type="submit"]:focus { background-color: rgba(255, 255, 255, 0.8); }
+
 #storeBox p { color: #fff; font-weight: bold; }
 
 @media screen and (min-width: 1920px) { header { height: 80px; padding: 0 10.625rem; }
@@ -452,7 +464,7 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #productBox .button_area button.prev { top: 0; }
   #productBox .button_area button.next { bottom: 0; }
   #productBox .button_area button .icon-right-arrow, #productBox .button_area button .icon-left-arrow { display: none; }
-  #productBox .slide_wrap { top: 50%; left: 45.834%; transform: translateY(-50%); width: 680px; height: 924px; }
+  #productBox .slide_wrap { top: 50%; left: 45.834%; transform: translateY(-50%); width: 740px; height: 924px; }
   #productBox ul { width: 100%; height: 300%; }
   #productBox ul li { position: relative; width: 100%; height: 268px; margin-bottom: 3.75rem; }
   #productBox ul li div { float: left; width: 400px; height: 268px; }

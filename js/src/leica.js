@@ -16,7 +16,6 @@
 // --------------------------------------------------------------
     const viewBox=wrap.find('#viewBox'),
           eventBox=wrap.find('#eventBox'),
-         
           storyBox=wrap.find('#storyBox'),
           viewUl=viewBox.find('ul'),
           viewLi=viewUl.find('li'),
@@ -33,7 +32,6 @@
           evnetList=eventBox.find('.event_list');
           
 // --------------------------------------------------------------
-
     let winH=win.outerHeight(),
         headBoxH=headBox.outerHeight();
 
@@ -56,23 +54,38 @@
     indiLi.eq(0).find('span').animate({left:'50px'},timed);
     indiLi02.eq(0).find('span').animate({left:'50px'},timed);
 
-    const slideGo = function(){
-        go=setInterval(function(){
+    let indiFn = function(indicator,li){
+        indicator.find('a').on('click',function(e){
+            e.preventDefault();
+            let indiIndex=$(this).parent().index();
+            li.eq(indiIndex).fadeIn(timed/1.5);
+            li.eq(indiIndex).siblings().fadeOut(timed/1.5);
+            if(li.eq(0).index()){
+                i=li.eq(indiIndex).index();
+            }else{
+                i=li.eq(indiIndex).index()-1;
+            }
+        });
+    };
 
+    const slideGo = function(){
+
+        indiFn(indiLi,viewLi);
+        indiFn(indiLi02,storyLi);
+
+        setInterval(function(){
             i++; j++;
             if(i==5){i=0;} if(j==6){j=0;}
             viewLi.eq(i).fadeIn(timed/1.5).siblings().fadeOut(timed/1.5);
             storyLi.eq(j).fadeIn(timed/1.5).siblings().fadeOut(timed/1.5);
-            
             indiLi.eq(i).find('span').animate({left:'50px'},timed*1.5);
             indiLi.eq(i).siblings().find('span').css({left:'-50px'});
-
             indiLi02.eq(j).find('span').animate({left:'50px'},timed*1.5);
             indiLi02.eq(j).siblings().find('span').css({left:'-50px'});
-
         },timed*1.5);
-    };
-    slideGo(); // viewBox, storyBox SETINTERVAL fadeIn&Out && indicatorBar
+
+    }; slideGo(); // viewBox, storyBox SETINTERVAL fadeIn&Out && indicatorBar
+
     const slideStop = function(){clearInterval(go);};      
     viewDiv.on('mouseenter', function(){slideStop();}).on('mouseleave', function(){slideGo();});
     storyDiv.on('mouseenter', function(){slideStop();}).on('mouseleave', function(){slideGo();});
@@ -81,9 +94,6 @@
     evnetList.on('mouseenter',function(){$(this).find('strong').css({color:'#e20613'});})
              .on('mouseleave',function(){$(this).find('strong').css({color:'#fff'});});
     // eventlist HOVER color change
-
-// --------------------------------------------------------------
-
 
 // --------------------------------------------------------------
 })(jQuery);

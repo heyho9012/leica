@@ -24,7 +24,7 @@ header{transition:all .5s ease;
             &:first-child{height:100%; span{display:block;height:100%;color:#fff;transition:all .5s ease;}}
             &:last-child{width:20px;height:48px;margin-right:0;}
                 a{@include link;color:#fff;font-weight:600;transition:all .5s ease;
-                    &:hover,&:focus{color:#e20613;font-weight:bold;span{color:#e20613;font-weight:bold;}}
+                    &:hover,&:focus{color:#e20613;font-weight:600; span{color:#e20613;font-weight:bold;}}
                 }
             
                 button{position:absolute;top:50%;transform:translateY(-50%);width:20px;height:16px;
