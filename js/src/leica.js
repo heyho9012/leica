@@ -51,20 +51,21 @@
     // ----------------------------------------------------------
     let go,i=0,j=0,timed=3000;
 
-    indiLi.eq(0).find('span').animate({left:'50px'},timed);
-    indiLi02.eq(0).find('span').animate({left:'50px'},timed);
+    indiLi.eq(0).find('span').animate({left:'50px'},timed*1.5);
+    indiLi02.eq(0).find('span').animate({left:'50px'},timed*1.5);
 
     let indiFn = function(indicator,li){
         indicator.find('a').on('click',function(e){
+
             e.preventDefault();
+            
             let indiIndex=$(this).parent().index();
+            
             li.eq(indiIndex).fadeIn(timed/1.5);
             li.eq(indiIndex).siblings().fadeOut(timed/1.5);
-            if(li.eq(0).index()){
-                i=li.eq(indiIndex).index();
-            }else{
-                i=li.eq(indiIndex).index()-1;
-            }
+            
+            i=li.eq(indiIndex).index()-1;
+            j=li.eq(indiIndex).index()-1;
         });
     };
 
@@ -74,14 +75,19 @@
         indiFn(indiLi02,storyLi);
 
         setInterval(function(){
-            i++; j++;
-            if(i==5){i=0;} if(j==6){j=0;}
+
+            indiLi.eq(i).siblings().find('span').css({left:'-50px'});
+            indiLi02.eq(j).siblings().find('span').css({left:'-50px'});
+
+            i++; if(i==5){i=0;}
+            j++; if(j==6){j=0;}
+
             viewLi.eq(i).fadeIn(timed/1.5).siblings().fadeOut(timed/1.5);
             storyLi.eq(j).fadeIn(timed/1.5).siblings().fadeOut(timed/1.5);
-            indiLi.eq(i).find('span').animate({left:'50px'},timed*1.5);
-            indiLi.eq(i).siblings().find('span').css({left:'-50px'});
-            indiLi02.eq(j).find('span').animate({left:'50px'},timed*1.5);
-            indiLi02.eq(j).siblings().find('span').css({left:'-50px'});
+
+            indiLi.eq(i).find('span').stop().animate({left:'50px'},timed*1.5);
+            indiLi02.eq(j).find('span').stop().animate({left:'50px'},timed*1.5);
+
         },timed*1.5);
 
     }; slideGo(); // viewBox, storyBox SETINTERVAL fadeIn&Out && indicatorBar
