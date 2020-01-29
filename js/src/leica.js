@@ -82,11 +82,11 @@
             i++; if(i==5){i=0;}
             j++; if(j==6){j=0;}
 
-            viewLi.eq(i).fadeIn(timed/1.5);
+            viewLi.eq(i).fadeIn(timed);
             viewLi.eq(i).siblings().fadeOut(timed);
             storyLi.eq(j).fadeIn(timed);
-            storyLi.eq(i).siblings().fadeOut(timed);
-
+            storyLi.eq(j).siblings().fadeOut(timed);
+            
             indiLi.eq(i).find('span').stop().animate({left:'50px'},timed*2);
             indiLi02.eq(j).find('span').stop().animate({left:'50px'},timed*2);
 
