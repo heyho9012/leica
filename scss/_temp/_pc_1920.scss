@@ -116,7 +116,7 @@
                 dt{width:100%;height:18px;margin-bottom:1.25rem;
                     a{@include link;font-size:0.75rem;margin-bottom:1.375rem;}
                 }
-                dd{a{@include link;font-size:0.75rem;margin-bottom:0.5rem; &:last-child{margin-bottom:0;}}}
+                dd{a{@include link;font-size:0.75rem;margin-bottom:0.5rem; span{position:absolute;z-index:10;} &:last-child{margin-bottom:0;}}}
             }
             &:nth-child(5){margin-right:0;}
             &:last-child{margin-top:5.5rem;margin-right:0;}
