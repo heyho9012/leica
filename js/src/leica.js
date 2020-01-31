@@ -11,7 +11,7 @@
     headBox.load('./temp/header.html',function(){body.append('<script src="../js/src/temp/header.js"></script>');});
     blogBox.load('./temp/blogbox.html',function(){body.append('<script src="../js/src/temp/blogbox.js"></script>');});
     productBox.load('./temp/productbox.html',function(){body.append('<script src="../js/src/temp/productbox.js"></script>');});
-    footBox.load('./temp/footer.html');
+    footBox.load('./temp/footer.html',function(){body.append('<script src="../js/src/temp/footer.js"></script>');});
 
 // --------------------------------------------------------------
     const viewBox=wrap.find('#viewBox'),

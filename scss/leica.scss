@@ -19,7 +19,7 @@ article,aside{width:100%;margin:auto;min-width:23.75rem;}
 #viewBox{position:relative;height:100%;
     @include indicator;
     >ul{position:relative;width:100%;height:100%;
-        >li{position:absolute;left:0;top:0;width:100%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:70% 0;box-sizing:border-box; 
+        >li{position:absolute;left:0;top:0;width:100%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:70% 50%;box-sizing:border-box; 
             &:last-child{p{color:#060606;}}
             &:not(:first-child){display:none;}
             @for $i from 1 to 6 {&:nth-child(#{$i}){background-image:url("../img/view/view_0"+$i+".jpg");}}
@@ -55,10 +55,11 @@ article,aside{width:100%;margin:auto;min-width:23.75rem;}
     ul>li{
         @for $i from 1 to 8{&.p_slide_0#{$i} a{background-image:url("../img/product/product_0"+$i+".png");}}
         a{@include link;background-repeat:no-repeat;background-position:50% 50%;background-size:cover;transition:all .5s ease;
-            &:hover,&:focus{transform:scale(1.06);}
+            &.product_action{transform:scale(1.06);}
         }
-        p{font-weight:600;span{display:block;color:#e20613;font-weight:bold;}}
-    }
+        p{font-weight:600;transition:all .5s ease;color:#909090; span{display:block;color:#e20613;font-weight:bold;transition:all .5s ease;}
+        &.product_action{color:#e20613;font-weight:600;span{color:#060606;}}
+    }}
     .button_area{
         button{position:relative;background-color:transparent;transition:all .5s ease;
             &:hover{ span{color:#e20613;}}

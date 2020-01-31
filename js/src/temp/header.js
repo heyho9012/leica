@@ -3,12 +3,22 @@
 const headBox=$('#headBox'),
       gnb=headBox.find('#gnb'),
       gnbTitle=gnb.children('ul').children('li'),
-      menuBtn=headBox.find('.menu_icon');
+      menuBtn=headBox.find('.menu_icon'),
+      menuBox=headBox.find('.menu_box');
       
+menuBox.css({display:'none'});
+
 menuBtn.on('click',function(e){
     e.preventDefault();
     menuBtn.toggleClass('menu_act');
+    menuBox.fadeToggle();
 }); //headBox,footBox LOAD & FUNCTION
+
+menuBox.on('scroll touchmove mousewheel',function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+}); //menuBox scroll & touchmove & mousewheel fixing
 
 let time=400;
 
