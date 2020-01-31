@@ -1,4 +1,4 @@
-footer{width:100%;background-color:#f6ebe8;box-sizing:border-box; 
+footer{position:relative;width:100%;height:auto;background-color:#f6ebe8;box-sizing:border-box; 
     a{transition:all .3s ease;}
 }
 .foot_list_01{
@@ -21,7 +21,7 @@ footer{width:100%;background-color:#f6ebe8;box-sizing:border-box;
         }
         dd a.foot_act{color:#e20613;}
 }}
-#footBox .follow dd{a{line-height:1.25rem;span{position:absolute;z-index:100;display:block;width:20px;height:20px;font-size:1.25rem;} p{margin-left:2rem;}}}
+#footBox .follow dd{a{line-height:1.25rem;span{position:absolute;z-index:100;display:block;width:20px;height:20px;font-size:1.25rem;}p{margin-left:2rem;}}}
 .foot_list_02{margin:auto;
     li{float:left;margin-right:1.5rem;font-size:0.75rem;font-weight:600;
         a{font-size:0.75rem;font-weight:600;}

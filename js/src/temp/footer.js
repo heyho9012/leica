@@ -3,6 +3,7 @@
 const footBox=$('#footBox'),
       footList01=footBox.find('.foot_list_01');
 
+// --------------------------------------------------------------
 footList01.find('dd').find('a').on('mouseenter focus',function(){
     $(this).addClass('foot_act');
     $(this).parent().siblings('dt').find('a').addClass('foot_act');
@@ -18,3 +19,21 @@ for(let i=0;i<5;i++){
         $(this).parent().siblings('dt').find('a').removeClass('foot_act');
     });
 }
+
+// --------------------------------------------------------------
+const FootFn=function(){
+    footList01.find('dt').find('a').on('click',function(e){
+        e.preventDefault();
+        $(this).parent().siblings('dd').stop().slideToggle();
+        for(let i=0;i<4;i++){
+            $(this).parent().parent().parent().siblings().find('dd').eq(i).stop().slideUp();
+        }
+    });
+}; 
+
+// --------------------------------------------------------------
+const DeviceFoot = function(winW){
+    if(winW <= tablet){FootFn();}
+}; DeviceFoot(beforeW);
+
+// --------------------------------------------------------------

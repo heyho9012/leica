@@ -73,7 +73,7 @@ productWrap.find('a').on('mouseenter focus',function(){
 });
 
 // --------------------------------------------------------------
-    const mobile=767;
+    const mobile=767,tablet=1279;
     let beforeW = $(window).outerWidth(true);//margin값까지 포함.
 
     const DeviceSet = function(winW){
