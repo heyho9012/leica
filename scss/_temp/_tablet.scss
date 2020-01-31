@@ -98,12 +98,14 @@
         li{
             &:nth-child(5){dd{width:120px;margin:-1rem auto 2.25rem;}}
             dl{
-                dt{
-                    a{text-align:center;margin-bottom:2.25rem;}
+                dt{margin-bottom:2.25rem;
+                    a{text-align:center;}
                     p{text-align:center;}
                 }
                 dd{display:none;margin:-1rem auto 2.25rem;
-                     a{@include link;margin-bottom:1rem;font-size:0.6875rem;text-align:center;}
+                     a{@include link($h:auto);margin-bottom:1rem;font-size:0.6875rem;text-align:center;
+                        &:last-child{margin-bottom:0;}
+                    }
                 }
             }
             &:last-child{dd{display:block;margin:auto;}}
