@@ -97,7 +97,7 @@ footer a { transition: all .3s ease; }
 
 .foot_list_01 li:last-child dl dt { width: 100%; height: auto; margin-bottom: 0.75rem; }
 
-.foot_list_01 li:last-child dl dd { width: 132px; position: relative; z-index: 100; }
+.foot_list_01 li:last-child dl dd { width: 132px; }
 
 .foot_list_01 li:last-child dl dd input { float: left; box-sizing: border-box; }
 
@@ -121,7 +121,7 @@ footer a { transition: all .3s ease; }
 
 #footBox .follow dd a { line-height: 1.25rem; }
 
-#footBox .follow dd a span { position: absolute; z-index: 100; display: block; width: 20px; height: 20px; font-size: 1.25rem; }
+#footBox .follow dd a span { width: 20px; height: 20px; font-size: 1.25rem; }
 
 #footBox .follow dd a p { margin-left: 2rem; }
 
@@ -736,11 +736,11 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   .foot_list_01 li dl dt a { text-align: center; }
   .foot_list_01 li dl dt p { text-align: center; }
   .foot_list_01 li dl dd { display: none; margin: -1rem auto 2.25rem; }
-  .foot_list_01 li dl dd a { display: block; width: 100%; height: auto; margin-bottom: 1rem; font-size: 0.6875rem; text-align: center; }
-  .foot_list_01 li dl dd a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+  .foot_list_01 li dl dd a { display: block; width: 100%; margin-bottom: 1rem; font-size: 0.6875rem; text-align: center; }
+  .foot_list_01 li dl dd a span { float: left; }
   .foot_list_01 li dl dd a:last-child { margin-bottom: 0; }
   .foot_list_01 li:last-child dd { display: block; margin: auto; }
-  .foot_list_02 { position: relative; width: 338px; height: 160px; }
+  .foot_list_02 { position: relative; z-index: 1000; width: 338px; height: 160px; }
   .foot_list_02 li:nth-child(4) { margin-bottom: 5.5rem; margin-right: 0; }
   .foot_list_02 li:nth-child(5) { width: 100%; text-align: center; }
   .foot_list_02 li:last-child { position: absolute; left: 50%; transform: translateX(-50%); text-align: center; top: 3rem; } }
@@ -826,8 +826,7 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   .foot_list_01 li dl dt a { text-align: center; }
   .foot_list_01 li dl dt p { text-align: center; }
   .foot_list_01 li dl dd { display: none; height: auto; margin: -1rem auto 2.25rem; }
-  .foot_list_01 li dl dd a { display: block; width: 100%; height: auto; margin-bottom: 1rem; font-size: 0.6875rem; text-align: center; }
-  .foot_list_01 li dl dd a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+  .foot_list_01 li dl dd a { display: block; width: 100%; margin-bottom: 1rem; font-size: 0.6875rem; text-align: center; }
   .foot_list_01 li dl dd a:last-child { margin-bottom: 0; }
   .foot_list_01 li:last-child dd { display: block; margin: auto; }
   .foot_list_02 { position: relative; width: 338px; height: 160px; }

@@ -103,14 +103,15 @@
                     p{text-align:center;}
                 }
                 dd{display:none;margin:-1rem auto 2.25rem;
-                     a{@include link($h:auto);margin-bottom:1rem;font-size:0.6875rem;text-align:center;
+                     a{display:block;width:100%;margin-bottom:1rem;font-size:0.6875rem;text-align:center;
+                        span{float:left;}
                         &:last-child{margin-bottom:0;}
                     }
                 }
             }
             &:last-child{dd{display:block;margin:auto;}}
 }}
-.foot_list_02{position:relative;width:338px;height:160px;
+.foot_list_02{position:relative;z-index:1000;width:338px;height:160px;
     li:nth-child(4){margin-bottom:5.5rem;margin-right:0;}
     li:nth-child(5){width:100%;text-align:center;}
     li:last-child{@include center;top:3rem;}

@@ -99,7 +99,7 @@
                     p{text-align:center;}
                 }
                 dd{display:none;height:auto;margin:-1rem auto 2.25rem;
-                     a{@include link($h:auto);margin-bottom:1rem;font-size:0.6875rem;text-align:center;
+                     a{display:block;width:100%;margin-bottom:1rem;font-size:0.6875rem;text-align:center;
                         &:last-child{margin-bottom:0;}
                     }
                 }
