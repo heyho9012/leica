@@ -11,7 +11,7 @@
             a{line-height:3rem;font-size:0.75rem;}}}
 // -------------------------------------------------------------
     #viewBox{
-        >ul{>li{padding:0 50px; p{font-size:1.5rem;word-break:keep-all;width:370px;} a{@include link(180px,42px);line-height:2.625rem;}}}
+        >ul{>li{padding:0 50px; p{font-size:1.5rem;word-break:keep-all;width:300px;} a{@include link(180px,42px);line-height:2.625rem;}}}
         .indicator{left:50%;transform:translateX(-50%);bottom:2rem;}
         >ul>li:nth-child(2){background-position:100% 0;}
     }
