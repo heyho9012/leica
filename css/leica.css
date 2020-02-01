@@ -695,6 +695,7 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #storyBox { height: 1024px; }
   #storyBox h2 { top: 25rem; width: 268px; height: 56px; font-size: 1.5rem; line-height: 3.5rem; }
   #storyBox > ul > li:nth-child(5) div a { padding-left: 2.5rem; }
+  #storyBox > ul > li:last-child { background-position: 60% 50%; }
   #storyBox > ul > li div { width: 400px; height: 282px; }
   #storyBox > ul > li div:before { top: 6.5rem; right: 1.5rem; }
   #storyBox > ul > li div:after { bottom: 1.5rem; left: 1.5rem; }
@@ -787,6 +788,7 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #storyBox { height: 640px; }
   #storyBox h2 { top: 14rem; width: 180px; height: 56px; font-size: 1.25rem; line-height: 3.5rem; }
   #storyBox > ul > li:nth-child(5) div a { padding-left: 3rem; }
+  #storyBox > ul > li:last-child { background-position: 60% 50%; }
   #storyBox > ul > li div { width: 360px; height: 204px; }
   #storyBox > ul > li div a { padding: 4.75rem 0 0 4.25rem; box-sizing: border-box; font-size: 1.25rem; line-height: 1.5rem; }
   #storyBox > ul > li div a em { font-size: 0.75rem; }

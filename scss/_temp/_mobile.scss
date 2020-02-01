@@ -45,6 +45,7 @@
     h2{top:14rem;width:180px;height:56px;font-size:1.25rem;line-height:3.5rem;}
     >ul{>li{
         &:nth-child(5){div{a{padding-left:3rem;}}}
+        &:last-child{background-position:60% 50%;}
         div{width:360px;height:204px; a{padding:4.75rem 0 0 4.25rem;box-sizing:border-box;font-size:1.25rem;line-height:1.5rem; em{font-size:0.75rem;}}
         &:before{top:4rem;right:1rem;}
         &:after{bottom:1rem;left:1rem;}
