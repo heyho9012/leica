@@ -105,7 +105,7 @@ footer a { transition: all .3s ease; }
 
 .foot_list_01 li:last-child dl dd input:first-of-type { width: 114px; height: 18px; border: 0; border-bottom: 2px solid #060606; background-color: transparent; line-height: 1.125rem; }
 
-.foot_list_01 li:last-child dl dd input:last-of-type { font-family: 'icomoon'; width: 18px; height: 18px; border: 0; font-size: 0.6875rem; font-weight: bold; color: #e20613; background-color: transparent; }
+.foot_list_01 li:last-child dl dd input:last-of-type { font-family: 'icomoon'; width: 18px; height: 18px; border: 0; font-size: 0.75rem; font-weight: bold; color: #e20613; background-color: transparent; }
 
 .foot_list_01 dl dt a { display: block; width: 100%; height: 100%; font-weight: bold; font-size: 0.75rem; }
 
@@ -445,7 +445,7 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
 
 #storeBox dl dd input:first-of-type { height: 100%; border: 1px solid #fff; background-color: rgba(255, 255, 255, 0.1); }
 
-#storeBox dl dd input[type="submit"] { font-family: 'icomoon'; height: 100%; border: 0; background-color: #fff; font-weight: bold; color: #e20613; font-size: 1.5rem; text-indent: 0.25rem; }
+#storeBox dl dd input[type="submit"] { font-family: 'icomoon'; height: 100%; border: 0; background-color: #fff; font-weight: bold; color: #e20613; font-size: 1.25rem; text-indent: 0.25rem; }
 
 #storeBox dl dd input[type="submit"]:hover, #storeBox dl dd input[type="submit"]:focus { background-color: rgba(255, 255, 255, 0.8); }
 
