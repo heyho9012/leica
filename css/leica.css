@@ -37,7 +37,7 @@ header h1 a > span { position: absolute; z-index: -1; display: block; width: 0; 
 
 #unb > ul li { float: left; width: auto; height: 100%; }
 
-#unb > ul li:first-child { position: relative; z-index: 10; height: 100%; }
+#unb > ul li:first-child { position: relative; z-index: 100; height: 100%; }
 
 #unb > ul li:first-child span { display: block; height: 100%; color: #fff; transition: all .5s ease; }
 
@@ -71,17 +71,19 @@ header h1 a > span { position: absolute; z-index: -1; display: block; width: 0; 
 
 #unb .menu_box { position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; background-color: #060606; }
 
-#unb .menu_box ul { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: auto; }
+#unb .menu_box div { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: auto; }
 
-#unb .menu_box ul li { margin-bottom: 2rem; }
+#unb .menu_box div ul { float: left; }
 
-#unb .menu_box ul li:last-child { margin-bottom: 0; }
+#unb .menu_box div ul li { margin-bottom: 2rem; }
 
-#unb .menu_box ul li a { display: block; width: 100%; height: 100%; color: #fff; text-align: center; }
+#unb .menu_box div ul li:last-child { margin-bottom: 0; }
 
-#unb .menu_box ul li a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+#unb .menu_box div ul li a { display: block; width: 100%; height: 100%; color: #fff; text-align: center; font-weight: 600; padding: 0 0.25rem; }
 
-#unb .menu_box ul li a:hover, #unb .menu_box ul li a:focus { color: #e20613; font-weight: 600; }
+#unb .menu_box div ul li a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+
+#unb .menu_box div ul li a:hover, #unb .menu_box div ul li a:focus { color: #e20613; font-weight: 600; }
 
 #headBox.action { background-color: rgba(6, 6, 6, 0.7); }
 
@@ -462,6 +464,7 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb > ul > li:first-child span { width: 24px; font-size: 1.375rem; line-height: 5rem; }
   #unb > ul > li a { line-height: 5rem; font-size: 1rem; }
   #unb > ul > li a span { line-height: 5rem; }
+  .menu_box ul:first-child { display: none; }
   #viewBox > ul > li { padding: 0 10.625rem; }
   #viewBox > ul > li p { font-size: 3.5rem; }
   #viewBox > ul > li a { display: block; width: 240px; height: 62px; font-size: 1.25rem; line-height: 3.875rem; }
@@ -565,6 +568,7 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb > ul > li:first-child { width: 24px; }
   #unb > ul > li:first-child span { width: 24px; height: 100%; text-indent: 0.125rem; font-size: 1.25rem; line-height: 5rem; }
   #unb > ul > li a { line-height: 5rem; font-size: 0.75rem; }
+  .menu_box ul:first-child { display: none; }
   #viewBox > ul > li { padding: 0 7.05%; }
   #viewBox > ul > li p { font-size: 3rem; }
   #viewBox > ul > li a { display: block; width: 240px; height: 62px; font-size: 1.25rem; line-height: 3.875rem; }
@@ -662,6 +666,10 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb > ul > li:first-child { width: 24px; }
   #unb > ul > li:first-child span { width: 24px; height: 48px; text-indent: 0.125rem; font-size: 1.25rem; line-height: 3.125rem; }
   #unb > ul > li a { line-height: 3rem; font-size: 0.75rem; }
+  #unb .menu_box div { width: 376px; }
+  #unb .menu_box ul { margin-right: 5rem; }
+  #unb .menu_box ul:last-child { margin-right: 0; }
+  #unb .menu_box ul a { text-align: left; }
   #viewBox > ul > li { padding: 0 2.125rem; }
   #viewBox > ul > li p { font-size: 2.5rem; }
   #viewBox > ul > li a { display: block; width: 180px; height: 42px; line-height: 2.625rem; }
@@ -755,6 +763,10 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb > ul > li:first-child { width: 24px; }
   #unb > ul > li:first-child span { width: 24px; height: 48px; text-indent: 0.125rem; font-size: 1.25rem; line-height: 3.125rem; }
   #unb > ul > li a { line-height: 3rem; font-size: 0.75rem; }
+  #unb .menu_box div { width: 376px; }
+  #unb .menu_box ul { margin-right: 5rem; }
+  #unb .menu_box ul:last-child { margin-right: 0; }
+  #unb .menu_box ul a { text-align: left; }
   #viewBox > ul > li { padding: 0 50px; }
   #viewBox > ul > li p { font-size: 1.5rem; word-break: keep-all; width: 300px; }
   #viewBox > ul > li a { display: block; width: 180px; height: 42px; line-height: 2.625rem; }

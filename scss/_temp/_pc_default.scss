@@ -14,6 +14,7 @@
         >ul>li{margin-right:1.75rem;
             &:first-child{width:24px; span{width:24px;height:100%;text-indent:0.125rem;font-size:1.25rem;line-height:5rem;}}
             a{line-height:5rem;font-size:0.75rem;}}}
+        .menu_box{ul:first-child{display:none;}}
 // -------------------------------------------------------------
     #viewBox{
         >ul{>li{padding:0 7.05%;p{font-size:3rem;} a{@include link(240px,62px);font-size:1.25rem;line-height:3.875rem;}}}

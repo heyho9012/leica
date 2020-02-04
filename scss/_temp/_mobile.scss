@@ -8,7 +8,13 @@
     #unb{width:164px;height:100%;
         >ul>li{margin-right:2.75rem;
             &:first-child{width:24px; span{width:24px;height:48px;text-indent:0.125rem;font-size:1.25rem;line-height:3.125rem;}} 
-            a{line-height:3rem;font-size:0.75rem;}}}
+            a{line-height:3rem;font-size:0.75rem;}
+    }}
+    #unb .menu_box{
+            div{width:376px;}
+            ul{margin-right:5rem;
+                &:last-child{margin-right:0;} a{text-align:left;}
+        }}
 // -------------------------------------------------------------
     #viewBox{
         >ul{>li{padding:0 50px; p{font-size:1.5rem;word-break:keep-all;width:300px;} a{@include link(180px,42px);line-height:2.625rem;}}}
