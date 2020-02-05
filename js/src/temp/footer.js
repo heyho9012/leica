@@ -36,7 +36,10 @@ const head=$('head');
 const PcFull =function(){ 
     footBox.find('.pc_ver').on('click',function(e){
         e.preventDefault();
-        head.find('meta').eq(1).attr({"content":"width=1920"});
+        head.find('meta').eq(1).attr({"content":"width=1280"});
+        $('#viewBox').css({height:'800px'});
+        ProductSlide();
+        $('html,body').stop().animate({scrollTop:0},0);
     });
 }; PcFull();
 

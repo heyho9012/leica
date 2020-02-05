@@ -21,8 +21,6 @@
           if (nowb === 'firefox') {
             window.location = window.location;
           } else if(PcFull){
-            $('#viewBox').css({height:'900px'});
-            ProductSlide(); 
           } else {
             location.reload();
           }

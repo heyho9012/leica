@@ -41,7 +41,7 @@ header{transition:all .5s ease;
             div{@include img_center;width:auto;height:auto;
                 ul{float:left;
                     li{margin-bottom:2rem; &:last-child{margin-bottom:0;}
-                        a{@include link;color:#fff;text-align:center;font-weight:600;padding:0 0.25rem;
+                        a{@include link;color:#fff;text-align:center;font-weight:600;
                             &:hover,&:focus{color:#e20613;font-weight:600;}
                         }
             }}}}

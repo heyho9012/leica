@@ -11,10 +11,11 @@
             a{line-height:3rem;font-size:0.75rem;}
     }}
     #unb .menu_box{
-            div{width:376px;}
+            div{width:284px;}
             ul{margin-right:5rem;
-                &:last-child{margin-right:0;} a{text-align:left;}
-        }}
+                &:last-child{margin-right:0;}
+                a{text-align:center;font-size:12px;}
+    }}
 // -------------------------------------------------------------
     #viewBox{
         >ul{>li{padding:0 50px; p{font-size:1.5rem;word-break:keep-all;width:300px;} a{@include link(180px,42px);line-height:2.625rem;}}}
