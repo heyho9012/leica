@@ -116,7 +116,8 @@
 }}
 .foot_list_02{position:relative;z-index:1000;width:338px;height:160px;
     li:nth-child(4){margin-bottom:5.5rem;margin-right:0;}
-    li:nth-child(5){width:100%;text-align:center;}
+    li:nth-child(5){@include center; top:132px;}
+    li:nth-child(6){width:100%;text-align:center;}
     li:last-child{@include center;top:3rem;}
 }
 // -------------------------------------------------------------

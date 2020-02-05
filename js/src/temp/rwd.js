@@ -20,6 +20,9 @@
         if (beforeDevice !== afterDevice) { //가로값이 변경되었을 때만 새로고침(세로값 변화 상관없음)
           if (nowb === 'firefox') {
             window.location = window.location;
+          } else if(PcFull){
+            $('#viewBox').css({height:'900px'});
+            ProductSlide(); 
           } else {
             location.reload();
           }

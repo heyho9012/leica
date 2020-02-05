@@ -124,6 +124,7 @@
 }}
 .foot_list_02{position:relative;width:814.8px;height:48px;
     li{margin-right:3.75rem;margin-top:1rem;
+        &:nth-child(5){display:none;}
         &:last-child{margin-right:0;margin:0;}
     }
 }
