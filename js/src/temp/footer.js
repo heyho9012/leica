@@ -31,9 +31,19 @@ const FootFn=function(){
     });
 }; 
 
+const head=$('head');
+
+const PcFull =function(){ 
+    footBox.find('.logo').on('click',function(e){
+        e.preventDefault();
+        head.find('meta').eq(1).attr({"content":"width=1920"});
+    });
+}; //PcFull();
+
 // --------------------------------------------------------------
 const DeviceFoot = function(winW){
     if(winW <= tablet){FootFn();}
 }; DeviceFoot(beforeW);
 
 // --------------------------------------------------------------
+

@@ -1,5 +1,5 @@
 /* leica.css */
-header { transition: all .5s ease; position: fixed; top: 0; left: 0; z-index: 2000; width: 100vw; background-color: #060606; box-sizing: border-box; }
+header { transition: all .5s ease; position: fixed; top: 0; left: 0; z-index: 2000; width: 100%; background-color: #060606; box-sizing: border-box; }
 
 header h1 { background-image: url("../img/logo/logo.svg"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; float: left; width: 48px; height: 48px; }
 
