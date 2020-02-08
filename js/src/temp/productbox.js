@@ -121,16 +121,14 @@ productWrap.find('a').on('mouseenter focus',function(){
 });
 
 // --------------------------------------------------------------
-    const mobile=767,tablet=1279;
-    let beforeW = $(window).outerWidth(true);//margin값까지 포함.
 
-    const DeviceSet = function(winW){
+    const DeviceSlide = function(winW){
         if(winW <= mobile){
           ProductSlideM();
         }else{
           ProductSlide();
         }
-    }; DeviceSet(beforeW);
+    }; DeviceSlide(beforeW);
 
 // --------------------------------------------------------------
 

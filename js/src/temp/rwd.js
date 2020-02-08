@@ -1,4 +1,3 @@
-(function($){
 
     const mobile=767, tablet=1279,laptop=1919, pc=1920;
     const device = ['mobile', 'tablet', 'laptop', 'pcfull'];
@@ -20,12 +19,15 @@
         if (beforeDevice !== afterDevice) { //가로값이 변경되었을 때만 새로고침(세로값 변화 상관없음)
           if (nowb === 'firefox') {
             window.location = window.location;
-          } else if(PcFull){
+          } else if(count==1){
+            count=0;
           } else {
             location.reload();
           }
-        };
+        }
     });
+
+    
 
 // --------------------------------------------------------------
     let nowSize;
@@ -66,4 +68,3 @@
     },200);
 
 // --------------------------------------------------------------
-})(jQuery);

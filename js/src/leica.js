@@ -8,6 +8,7 @@
           productBox=wrap.find('#productBox'),
           footBox=wrap.find('#footBox');
           
+    body.append('<script src="../js/src/temp/rwd.js"></script>')
     headBox.load('./temp/header.html',function(){body.append('<script src="../js/src/temp/header.js"></script>');});
     blogBox.load('./temp/blogbox.html',function(){body.append('<script src="../js/src/temp/blogbox.js"></script>');});
     productBox.load('./temp/productbox.html',function(){body.append('<script src="../js/src/temp/productbox.js"></script>');});

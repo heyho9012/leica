@@ -21,7 +21,7 @@ for(let i=0;i<5;i++){
 }
 
 // --------------------------------------------------------------
-const FootFn=function(){
+const FootFn = function(){
     footList01.find('dt').find('a').on('click',function(e){
         e.preventDefault();
         $(this).parent().siblings('dd').stop().slideToggle();
@@ -30,22 +30,25 @@ const FootFn=function(){
         }
     });
 }; 
-
-const head=$('head');
-
-const PcFull =function(){ 
+let count = 0;
+const PcVer = function(){ 
     footBox.find('.pc_ver').on('click',function(e){
         e.preventDefault();
-        head.find('meta').eq(1).attr({"content":"width=1280"});
+        $('html,body').stop().animate({scrollTop:0},0);
+        $('meta').eq(1).attr({"content":"width=1280"});
         $('#viewBox').css({height:'800px'});
         ProductSlide();
-        $('html,body').stop().animate({scrollTop:0},0);
+        footList01.find('dt').find('a').off('click');
+        count++;
     });
-}; PcFull();
+}; 
 
 // --------------------------------------------------------------
 const DeviceFoot = function(winW){
-    if(winW <= tablet){FootFn();}
+    if(winW <= tablet){
+        FootFn();
+        PcVer();
+    }
 }; DeviceFoot(beforeW);
 
 // --------------------------------------------------------------
