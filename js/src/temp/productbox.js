@@ -10,30 +10,53 @@ let productListH=productWrap.find('li').outerHeight(true);
 // --------------------------------------------------------------
 const ProductSlide = function(){
 
-productBtn.off().on('click',function(e){
-  e.preventDefault();
-  e.stopPropagation();
+    productBtn.off().on('click',function(e){
+      e.preventDefault();
+      e.stopPropagation();
 
-  let $hasNext=$(this).hasClass('next');  
+      let $hasNext=$(this).hasClass('next');  
 
-  productBtn.attr("disabled",true);
-  setTimeout(function(){productBtn.removeAttr("disabled");},500);
+      productBtn.attr("disabled",true);
+      setTimeout(function(){productBtn.removeAttr("disabled");},500);
 
-  if($hasNext){
-      c++;
-      productWrap.stop().animate({top:-productListH},function(){
-          productWrap.children('li').eq(0).appendTo(productWrap);
-          productWrap.css({top:0});
-      });
-  }else{
-      c--;
-      productWrap.stop().animate({top:productListH},function(){
-          productWrap.children('li').eq(-1).prependTo(productWrap);
-          productWrap.css({top:0});
-      });
-  }
-});
+      if($hasNext){
+          c++;
+          productWrap.stop().animate({top:-productListH},function(){
+              productWrap.children('li').eq(0).appendTo(productWrap);
+              productWrap.css({top:0});
+          });
+      }else{
+          c--;
+          productWrap.stop().animate({top:productListH},function(){
+              productWrap.children('li').eq(-1).prependTo(productWrap);
+              productWrap.css({top:0});
+          });
+      }
+    });
 
+    productWrap.on('touchstart',function(event){
+        startX = event.originalEvent.changedTouches[0].screenX;
+    });
+    
+    productWrap.on('touchend',function(event){
+        endX=event.originalEvent.changedTouches[0].screenX;
+        if(startX-endX>50){
+            k--;
+            productWrap.stop().animate({top:productListH},function(){
+                productWrap.children('li').eq(-1).prependTo(productWrap);
+                productWrap.css({top:0});
+            });
+
+        }else if(endX-startX>50){
+            k++;
+            productWrap.stop().animate({top:-productListH},function(){
+                productWrap.children('li').eq(0).appendTo(productWrap);
+                productWrap.css({top:0});
+            });
+        }
+        // else if(startX-endX<50 || endX-startX<50 ){}
+    
+    }); // ProductBox list TOUCH move slid
 }; 
 
 const ProductSlideM = function(){
@@ -61,6 +84,31 @@ const ProductSlideM = function(){
           });
       }
     });
+
+    productWrap.on('touchstart',function(event){
+        startX = event.originalEvent.changedTouches[0].screenX;
+    });
+    
+    productWrap.on('touchend',function(event){
+        endX=event.originalEvent.changedTouches[0].screenX;
+        if(startX-endX>50){
+            k--;
+            productWrap.stop().animate({left:'-100%'},function(){
+                productWrap.children('li').eq(0).appendTo(productWrap);
+                productWrap.css({left:0});
+            });
+        }else if(endX-startX>50){
+            k++;
+            productWrap.stop().animate({left:'100%'},function(){
+                productWrap.children('li').eq(-1).prependTo(productWrap);
+                productWrap.css({left:0});
+                
+            });
+        }
+        // else if(startX-endX<50 || endX-startX<50 ){}
+    
+    }); // ProductBox list TOUCH move slid
+
 };
 
 // --------------------------------------------------------------
@@ -85,3 +133,4 @@ productWrap.find('a').on('mouseenter focus',function(){
     }; DeviceSet(beforeW);
 
 // --------------------------------------------------------------
+
