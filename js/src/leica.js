@@ -37,6 +37,7 @@
     let winH=win.outerHeight(),
         headBoxH=headBox.outerHeight();
 
+
     win.on('scroll', function(){
         let winScroll = win.scrollTop();
         // ---------------------------------

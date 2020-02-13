@@ -1,6 +1,7 @@
 // header.js
 
-const headBox=$('#headBox'),
+const win=$(window),
+      headBox=$('#headBox'),
       gnb=headBox.find('#gnb'),
       gnbTitle=gnb.children('ul').children('li'),
       menuBtn=headBox.find('.menu_icon'),
@@ -40,7 +41,6 @@ gnbTitle.on('mouseleave',function(){
 
 
 headBox.find('input').css({display:'none'});
-
 headBox.find('label').on('click',function(e){
     e.preventDefault();
     headBox.find('input').stop().fadeToggle();

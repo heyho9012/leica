@@ -39,6 +39,7 @@ const PcVer = function(){
         $('#viewBox').css({height:'800px'});
         ProductSlide();
         footList01.find('dt').find('a').off('click');
+        headBox.find('input').stop().fadeOut();
         count++;
     });
 }; 
