@@ -85,6 +85,18 @@ header h1 a > span { position: absolute; z-index: -1; display: block; width: 0; 
 
 #unb .menu_box div ul li a:hover, #unb .menu_box div ul li a:focus { color: #e20613; font-weight: 600; }
 
+#headBox form { position: relative; width: 100%; height: 100%; }
+
+#headBox form label { width: 100%; height: 100%; }
+
+#headBox form label i { color: #fff; }
+
+#headBox form input::placeholder { color: #fff; font-size: 0.75rem; line-height: 1.3125rem; text-indent: 0.5rem; }
+
+#headBox form input:first-of-type { position: absolute; bottom: -3.75rem; width: 300px; height: 50px; background-color: #060606; border: 2px solid #e20613; box-sizing: border-box; text-indent: 0.5rem; }
+
+#headBox form input:last-of-type { position: absolute; bottom: -3.75rem; width: 50px; height: 50px; font-size: 1rem; font-family: 'icomoon'; background-color: transparent; border: 0; color: #fff; }
+
 #headBox.action { background-color: rgba(6, 6, 6, 0.7); }
 
 #headBox.action nav > ul > li > ul { background-color: rgba(6, 6, 6, 0.7); }
@@ -230,6 +242,10 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
 #eventBox > ul > li > ul > li:last-child a span { position: relative; z-index: 500; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20px; height: 3px; background-color: #fff; transition: all 1s ease; }
 
 #eventBox > ul > li > ul > li:last-child a span:last-child { margin-top: -4px; left: 50%; transform: translateX(-50%) rotate(90deg); }
+
+#eventBox > ul > li > ul > li:last-child a:active { background-color: #060606; }
+
+#eventBox > ul > li > ul > li:last-child a:active span { background-color: #e20613; }
 
 #eventBox > ul > li > ul > li:last-child a:hover, #eventBox > ul > li > ul > li:last-child a:focus { transform: rotate(180deg); }
 
@@ -415,6 +431,10 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
 
 .blog_02 > ul > li > ul > li:last-of-type a span:last-child { margin-top: -3px; left: 50%; transform: translateX(-50%) rotate(90deg); }
 
+.blog_02 > ul > li > ul > li:last-of-type a:active { background-color: #060606; }
+
+.blog_02 > ul > li > ul > li:last-of-type a:active span { background-color: #e20613; }
+
 .blog_02 > ul > li > ul > li:last-of-type a:hover, .blog_02 > ul > li > ul > li:last-of-type a:focus { transform: rotate(180deg); }
 
 .blog_02 > ul > li > ul > li:last-of-type a { margin-right: 0.75rem; }
@@ -465,6 +485,9 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb > ul > li a { line-height: 5rem; font-size: 1rem; }
   #unb > ul > li a span { line-height: 5rem; }
   .menu_box ul:first-child { display: none; }
+  #headBox form label i { line-height: 5rem; }
+  #headBox form input:first-of-type { left: -7.125rem; }
+  #headBox form input:last-of-type { left: 8.5rem; }
   #viewBox > ul > li { padding: 0 10.625rem; }
   #viewBox > ul > li p { font-size: 3.5rem; }
   #viewBox > ul > li a { display: block; width: 240px; height: 62px; font-size: 1.25rem; line-height: 3.875rem; }
@@ -570,6 +593,9 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb > ul > li:first-child span { width: 24px; height: 100%; text-indent: 0.125rem; font-size: 1.25rem; line-height: 5rem; }
   #unb > ul > li a { line-height: 5rem; font-size: 0.75rem; }
   .menu_box ul:first-child { display: none; }
+  #headBox form label i { line-height: 5rem; }
+  #headBox form input:first-of-type { left: -10.5rem; }
+  #headBox form input:last-of-type { left: 5rem; }
   #viewBox > ul > li { padding: 0 7.05%; }
   #viewBox > ul > li p { font-size: 3rem; }
   #viewBox > ul > li a { display: block; width: 240px; height: 62px; font-size: 1.25rem; line-height: 3.875rem; }
@@ -672,6 +698,9 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb .menu_box ul { margin-right: 5rem; }
   #unb .menu_box ul:last-child { margin-right: 0; }
   #unb .menu_box ul a { text-align: left; }
+  #headBox form label i { line-height: 3rem; }
+  #headBox form input:first-of-type { left: -8rem; }
+  #headBox form input:last-of-type { left: 7.5rem; }
   #viewBox > ul > li { padding: 0 2.125rem; }
   #viewBox > ul > li p { font-size: 2.5rem; }
   #viewBox > ul > li a { display: block; width: 180px; height: 42px; line-height: 2.625rem; }
@@ -770,6 +799,9 @@ article, aside { width: 100%; margin: auto; min-width: 23.75rem; }
   #unb .menu_box ul { margin-right: 5rem; }
   #unb .menu_box ul:last-child { margin-right: 0; }
   #unb .menu_box ul a { text-align: center; font-size: 12px; }
+  #headBox form label i { line-height: 3rem; }
+  #headBox form input:first-of-type { left: -8.5rem; }
+  #headBox form input:last-of-type { left: 7.125rem; }
   #viewBox > ul > li { padding: 0 50px; }
   #viewBox > ul > li p { font-size: 1.5rem; word-break: keep-all; width: 300px; }
   #viewBox > ul > li a { display: block; width: 180px; height: 42px; line-height: 2.625rem; }

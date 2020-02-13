@@ -16,6 +16,12 @@
             &:first-child{width:24px; span{width:24px;font-size:1.375rem;line-height:5rem;}}
             a{line-height:5rem;font-size:1rem; span{line-height:5rem;}}}}
         .menu_box{ul:first-child{display:none;}}
+        
+    #headBox form{
+        label{i{line-height:5rem;}}
+        input:first-of-type{left:-7.125rem;}
+        input:last-of-type{left:8.5rem;}
+    }
 // -------------------------------------------------------------
     #viewBox{
         >ul{>li{padding:0 10.625rem; p{font-size:3.5rem;} a{@include link(240px,62px);font-size:1.25rem;line-height:3.875rem;}}}

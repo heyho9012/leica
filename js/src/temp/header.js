@@ -37,3 +37,11 @@ gnbTitle.on('mouseleave',function(){
     $(this).children('ul').stop().slideUp(time);
     $(this).children('a').removeClass('gnb_action');
 });
+
+
+headBox.find('input').css({display:'none'});
+
+headBox.find('label').on('click',function(e){
+    e.preventDefault();
+    headBox.find('input').stop().fadeToggle();
+});

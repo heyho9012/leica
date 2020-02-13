@@ -16,6 +16,11 @@
                 &:last-child{margin-right:0;}
                 a{text-align:center;font-size:12px;}
     }}
+    #headBox form{
+        label{i{line-height:3rem;}}
+        input:first-of-type{left:-8.5rem;}
+        input:last-of-type{left:7.125rem;}
+    }
 // -------------------------------------------------------------
     #viewBox{
         >ul{>li{padding:0 50px; p{font-size:1.5rem;word-break:keep-all;width:300px;} a{@include link(180px,42px);line-height:2.625rem;}}}

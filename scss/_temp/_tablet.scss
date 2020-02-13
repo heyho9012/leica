@@ -13,7 +13,12 @@
         ul{margin-right:5rem;
             &:last-child{margin-right:0;} a{text-align:left;}
     }}
-    
+
+    #headBox form{
+        label{i{line-height:3rem;}}
+        input:first-of-type{left:-8rem;}
+        input:last-of-type{left:7.5rem;}
+    }
 // -------------------------------------------------------------
     #viewBox{
         >ul{>li{padding:0 2.125rem;p{font-size:2.5rem;} a{@include link(180px,42px);line-height:2.625rem;}}}

@@ -30,5 +30,6 @@
   a{float:right;@include link($r,$r);border-radius:100%;background-color:#e20613;transition:all .5s ease;
     span{position:relative;z-index:500;top:50%;left:50%;transform:translate(-50%,-50%);width:$s;height:$w;background-color:#fff;transition:all 1s ease;
     &:last-child{margin-top:-($w+1);left:50%;transform:translateX(-50%) rotate(90deg);}}
-  &:hover,&:focus{transform:rotate(180deg);}
-}}
+    &:active{background-color:#060606;span{background-color:#e20613;}}
+    &:hover,&:focus{transform:rotate(180deg);}
+  }}
