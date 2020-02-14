@@ -45,3 +45,6 @@ headBox.find('label').on('click',function(e){
     e.preventDefault();
     headBox.find('input').stop().fadeToggle();
 });
+
+
+    
